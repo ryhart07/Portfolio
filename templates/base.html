@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>{% block title %}Error{% endblock %}</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="{{ url_for('home') }}" {% if request.endpoint == 'home' %}aria-current="page"{% endif %}>{% if request.endpoint == 'home' %}<span class="nav-pill" aria-hidden="true"></span>{% endif %}Home</a></li>
+          <li><a href="{{ url_for('journey') }}" {% if request.endpoint == 'journey' %}aria-current="page"{% endif %}>{% if request.endpoint == 'journey' %}<span class="nav-pill" aria-hidden="true"></span>{% endif %}Journey</a></li>
+          <li><a href="{{ url_for('contact') }}" {% if request.endpoint == 'contact' %}aria-current="page"{% endif %}>{% if request.endpoint == 'contact' %}<span class="nav-pill" aria-hidden="true"></span>{% endif %}Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    {% block content %}{% endblock %}
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>

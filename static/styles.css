@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Marko+One&display=swap');
+
+@view-transition {
+  navigation: auto;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Marko One', cursive;
+}
+
+img {
+  display: block;
+}
+
+html {
+  background-image: url(../static/images/temp.webp);
+  
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  border: 3px solid #373737;
+  padding: 0.7rem 0rem;
+  border-radius: 2rem;
+  background-color: #58585866;
+  backdrop-filter: blur(3px);
+  animation: center-navbar 1s both;
+  animation-timeline: scroll();
+  animation-range: 0% 11%;
+}
+
+@keyframes center-navbar {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-50vw + 50% + 1rem));
+  }
+}
+
+nav a {
+  position: relative;
+  isolation: isolate;
+  font-family: 'Indie Flower', cursive;
+  text-decoration: none;
+  color: #fff;
+  padding: 0.7rem;
+}
+
+nav a[aria-current="page"] {
+  border-radius: 2rem;
+}
+
+.nav-pill {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: 2rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  view-transition-name: active-nav-pill;
+}
+
+::view-transition-group(active-nav-pill) {
+  animation-duration: 350ms;
+  animation-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+}
