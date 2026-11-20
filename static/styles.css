@@ -123,6 +123,26 @@ section p {
   padding: 2rem 0;
 }
 
+.skills-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skills-header h5,
+.skills-header h6 {
+  text-align: center;
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.skills-header h3 {
+  text-align: center;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
 .skills-section h2 {
   text-align: center;
   color: #fff;
@@ -165,6 +185,76 @@ section p {
 .skill img {
   width: 40px;
   height: 40px;
+  transition: 0.3s ease;
+  box-shadow: none;
+}
+
+.skill:hover img {
+  filter: drop-shadow(0 4px 4px rgba(255, 255, 255, 0.8));
+}
+
+.skill.html:hover {
+  background: linear-gradient(
+    to right,
+    #385d1c 60%,
+    #444444 100%
+  );
+}
+
+.skill.css:hover {
+  background: linear-gradient(
+    to right, 
+    #385d1c 55%,
+    #444444 75%
+  );
+}
+
+.skill.javascript:hover {
+  background: linear-gradient(
+    to right, 
+    #385d1c 35%,
+    #444444 45%
+  );
+}
+
+.skill.react:hover {
+  background: linear-gradient(
+    to right, 
+    #385d1c 40%,
+    #444444 50%
+  );
+}
+
+.skill.flask:hover {
+  background: linear-gradient(
+    to right,
+    #385d1c 30%,
+    #444444 45%
+  );
+}
+
+.skill.python:hover {
+  background: linear-gradient(
+    to right,
+    #385d1c 75%,
+    #444444 85%
+  );
+}
+
+.skill.sql:hover {
+  background: linear-gradient(
+    to right,
+    #385d1c 20%,
+    #444444 40%
+  );
+}
+
+.skill.pandas:hover {
+  background: linear-gradient(
+    to right,
+    #385d1c 20%,
+    #444444 30%
+  );
 }
 
 footer {
