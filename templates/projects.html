@@ -1,11 +1,17 @@
 {% extends "base.html" %}
 
+{% block title %}Projects | Ryan's Portfolio{% endblock %}
+
 {% block content %}
-  <h1>Projects</h1>
-  <p>Here are some of my projects.</p>
-  <ul>
-    <li>Project 1: Description of project 1.</li>
-    <li>Project 2: Description of project 2.</li>
-    <li>Project 3: Description of project 3.</li>
-  </ul>
+  <main>
+    <h1>Projects</h1>
+    <p>Here are some of my projects.</p>
+    <div class="projects-list">
+      <ul>
+        <li><img src="../static/images/greatfortheplanet.png" alt="Project 1"><a href="https://ryhart07.github.io/greatfortheplanet" target="_blank">Take a look</a></li>
+        <li><img src="../static/images/ShoppingList.png" alt="Project 2"><a href="https://ryhart07.github.io/shopping_list" target="_blank">Take a look</a></li>
+        <li><img src="../static/images/NSI.png" alt="Project 3"><a href="https://ryhart07.github.io/northsentinalisland" target="_blank">Take a look</a></li>
+      </ul>
+    </div>
+  </main>
 {% endblock %}

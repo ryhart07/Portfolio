@@ -257,6 +257,25 @@ section p {
   );
 }
 
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projects-list ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.projects-list img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 footer {
   text-align: center;
   padding: 2rem;
